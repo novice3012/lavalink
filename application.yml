@@ -3,7 +3,7 @@ server:
   address: 0.0.0.0
 lavalink:
   server:
-    password: "67"
+    password: "MySuperSecretLavalinkPassword123"
     sources:
       youtube: true
       bandcamp: true
@@ -14,7 +14,7 @@ lavalink:
     bufferDurationMs: 400
     frameBufferDurationMs: 5000
     opusEncodingQuality: 10
-    resamplingQuality: HQ
+    resamplingQuality: HIGH   # <--- Changed from HQ to HIGH
     trackStuckThresholdMs: 10000
     useSeekGhosting: true
     youtubeSearchEnabled: true
