@@ -34,7 +34,7 @@ plugins:
       - MUSIC
       - ANDROID_VR
       - WEB
-      - WEBEMBEDDED
+      - TVHTML5EMBEDDED   # <--- This is the magic client that generates the login code
     oauth:
       enabled: true
 
