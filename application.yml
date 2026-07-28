@@ -44,4 +44,11 @@ logging:
     path: ./logs/
   level:
     root: INFO
-    lavalink: INFO  
+    lavalink: INFO
+
+    httpConfig:
+      proxy:
+        host: "31.59.20.176"
+        port: 6754
+        user: "wszjelgi"
+        password: "upipnjx7tn2z"
