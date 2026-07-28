@@ -32,13 +32,13 @@ plugins:
     allowDirectPlaylistIds: true
     clients:
       - MUSIC
+      - ANDROID_MUSIC
       - ANDROID_VR
       - WEB
-      - TV
+      - TVHTML5_SIMPLY
     oauth:
       enabled: true
       refreshToken: "1//0gkzfbgjK3G2xCgYIARAAGBASNwF-L9IrLmDA7aSBbzhohE-au7t4kNvklXvcZ6u3OA-drOdeFQmEv2RJhbwB3PZwjbcnN_fBkZA"
-
 logging:
   file:
     path: ./logs/
