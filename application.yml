@@ -38,7 +38,7 @@ plugins:
       - TVHTML5_SIMPLY
     oauth:
       enabled: true
-      refreshToken: "1//0gkzfbgjK3G2xCgYIARAAGBASNwF-L9IrLmDA7aSBbzhohE-au7t4kNvklXvcZ6u3OA-drOdeFQmEv2RJhbwB3PZwjbcnN_fBkZA"
+      # Notice the refresh token is gone!
 logging:
   file:
     path: ./logs/
