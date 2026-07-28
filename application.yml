@@ -39,16 +39,17 @@ plugins:
     oauth:
       enabled: true
       refreshToken: "1//0gWzqEX8y_dEXCgYIARAAGBASNwF-L9IrPKe-uqDpbCunzcnyVzyywf6vS_c02Nde6Huf0-BxwC_ltWuqVaalrJQFTxJ2cwwvCD8"
-logging:
-  file:
-    path: ./logs/
-  level:
-    root: INFO
-    lavalink: INFO
-
+      
     httpConfig:
       proxy:
         host: "31.59.20.176"
         port: 6754
         user: "wszjelgi"
         password: "upipnjx7tn2z"
+      
+logging:
+  file:
+    path: ./logs/
+  level:
+    root: INFO
+    lavalink: INFO
