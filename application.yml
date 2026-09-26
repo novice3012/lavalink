@@ -31,7 +31,7 @@ lavalink:
     bufferDurationMs: 400
     frameBufferDurationMs: 5000
     gc-warnings: true
-    opusEncodingQuality: 5
+    opusEncodingQuality: 10
     playerUpdateInterval: 5
     resamplingQuality: HIGH
     soundcloudSearchEnabled: true
