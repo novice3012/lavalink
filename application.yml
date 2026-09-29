@@ -25,10 +25,6 @@ lavalink:
     - dependency: com.github.topi314.lavasearch:lavasearch-plugin:1.0.0
       repository: https://maven.lavalink.dev/releases
       snapshot: false
-    # Verify this is the latest version at https://github.com/topi314/LavaLyrics/releases before deploying
-    - dependency: com.github.topi314.lavalyrics:lavalyrics-plugin:1.1.0
-      repository: https://maven.lavalink.dev/releases
-      snapshot: false
 
   server:
     password: ${LAVALINK_PASSWORD}
@@ -99,12 +95,6 @@ metrics:
     endpoint: /metrics
 
 plugins:
-  lavalyrics:
-    sources:
-      - spotify
-      - youtube
-      - deezer
-
   lavasearch:
     sources:
       - spotify
