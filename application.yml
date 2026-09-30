@@ -1,6 +1,23 @@
+# Lavalink configuration
+#
+# SECRETS ARE PULLED FROM ENVIRONMENT VARIABLES — set these in Render's
+# dashboard (Environment tab), not in this file:
+#   LAVALINK_PASSWORD       -> lavalink.server.password
+#   YOUTUBE_REFRESH_TOKEN   -> plugins.youtube.oauth.refreshToken
+#   YOUTUBE_SKIP_OAUTH_INIT -> plugins.youtube.oauth.skipInitialization
+#
+# First deploy: leave YOUTUBE_REFRESH_TOKEN unset and
+# YOUTUBE_SKIP_OAUTH_INIT=false, watch the Render logs for the OAuth URL,
+# complete verification with a burner Google account, copy the refresh
+# token from the logs, then set YOUTUBE_REFRESH_TOKEN and
+# YOUTUBE_SKIP_OAUTH_INIT=true and redeploy.
+
 lavalink:
   plugins:
-    - dependency: dev.lavalink.youtube:youtube-plugin:1.18.2
+    # Was pinned to an unreleased snapshot commit; moved to the current stable
+    # release, which includes newer fixes for the YouTube SABR/403 breakage.
+    # Check https://github.com/lavalink-devs/youtube-source/releases for anything newer.
+    - dependency: dev.lavalink.youtube:youtube-plugin:1.8.3
       repository: https://maven.lavalink.dev/releases
       snapshot: false
     - dependency: com.github.xylen-py.SlugYZeon:slugyzeon-plugin:4.4.7
@@ -13,11 +30,11 @@ lavalink:
       snapshot: false
 
   server:
-    password:
+    password: ${LAVALINK_PASSWORD}
     bufferDurationMs: 400
     frameBufferDurationMs: 5000
     gc-warnings: true
-    opusEncodingQuality: 5
+    opusEncodingQuality: 10
     playerUpdateInterval: 5
     resamplingQuality: HIGH
     soundcloudSearchEnabled: true
@@ -147,13 +164,8 @@ plugins:
 
     oauth:
       enabled: true
-      # Set via the PLUGINS_YOUTUBE_OAUTH_REFRESHTOKEN environment variable in
-      # Render — never commit the actual token to the repo. If left blank with
-      # skipInitialization set to false, Lavalink will print a device-auth URL
-      # + code to the boot logs and wait for you to authorize it manually in a
-      # browser before it finishes starting up.
-      refreshToken:
-      skipInitialization: false
+      refreshToken: ${YOUTUBE_REFRESH_TOKEN:}
+      skipInitialization: ${YOUTUBE_SKIP_OAUTH_INIT:false}
 
     remoteCipher:
       url: https://cipher.kikkia.dev/
@@ -167,4 +179,4 @@ server:
   address: 0.0.0.0
   http2:
     enabled: false
-  port: 80
+  port: ${SERVER_PORT:80}
