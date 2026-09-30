@@ -14,10 +14,9 @@
 
 lavalink:
   plugins:
-    # Was pinned to an unreleased snapshot commit; moved to the current stable
-    # release, which includes newer fixes for the YouTube SABR/403 breakage.
+    # Latest stable release, which includes newer fixes for the YouTube SABR/403 breakage.
     # Check https://github.com/lavalink-devs/youtube-source/releases for anything newer.
-    - dependency: dev.lavalink.youtube:youtube-plugin:1.8.3
+    - dependency: dev.lavalink.youtube:youtube-plugin:1.18.2
       repository: https://maven.lavalink.dev/releases
       snapshot: false
     - dependency: com.github.xylen-py.SlugYZeon:slugyzeon-plugin:4.4.7
