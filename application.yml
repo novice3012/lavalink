@@ -14,12 +14,14 @@
 
 lavalink:
   plugins:
-    # Latest stable release, which includes newer fixes for the YouTube SABR/403 breakage.
-    # Check https://github.com/lavalink-devs/youtube-source/releases for anything newer.
-    - dependency: dev.lavalink.youtube:youtube-plugin:1.18.2
-      repository: https://maven.lavalink.dev/releases
-      snapshot: false
-    - dependency: com.github.xylen-py.SlugYZeon:slugyzeon-plugin:4.5.3
+    # Testing ashton045's SABR fork (built by JitPack from the branch).
+    # To go back to the official plugin, replace with:
+    #   - dependency: dev.lavalink.youtube:youtube-plugin:1.18.2
+    #     repository: https://maven.lavalink.dev/releases
+    #     snapshot: false
+    - dependency: com.github.ashton045.youtube-source:youtube-plugin:feat~sabr-support-SNAPSHOT
+      repository: https://jitpack.io
+    - dependency: com.github.xylen-py.SlugYZeon:slugyzeon-plugin:4.4.7
       repository: https://jitpack.io
     - dependency: com.github.topi314.lavasrc:lavasrc-plugin:4.8.3
       repository: https://maven.lavalink.dev/releases
