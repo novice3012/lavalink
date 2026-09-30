@@ -19,7 +19,7 @@ lavalink:
     - dependency: dev.lavalink.youtube:youtube-plugin:1.18.2
       repository: https://maven.lavalink.dev/releases
       snapshot: false
-    - dependency: com.github.xylen-py.SlugYZeon:slugyzeon-plugin:4.4.7
+    - dependency: com.github.xylen-py.SlugYZeon:slugyzeon-plugin:4.5.3
       repository: https://jitpack.io
     - dependency: com.github.topi314.lavasrc:lavasrc-plugin:4.8.3
       repository: https://maven.lavalink.dev/releases
